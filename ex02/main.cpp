@@ -1,23 +1,17 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
-    std::cout << "--- ClapTrap test ---" << std::endl;
-    ClapTrap ct("CL4P-TP");
-    ct.attack("trash can");
-    ct.takeDamage(5);
-    ct.beRepaired(3);
+    std::cout << "\n--- FragTrap tests ---\n";
+    FragTrap ft("FR4G-TP");
+    ft.attack("target");
+    ft.takeDamage(40);
+    ft.beRepaired(20);
+    ft.highFivesGuys();
 
-    std::cout << "\n--- ScavTrap test ---" << std::endl;
-    ScavTrap st("SC4V-TP");
-    st.attack("intruder");
-    st.takeDamage(20);
-    st.beRepaired(10);
-    st.guardGate();
-
-    std::cout << "\n--- Copy/assign test ---" << std::endl;
-    ScavTrap copy(st);
-    ScavTrap assigned;
-    assigned = st;
+    std::cout << "\n--- Copy/assign FragTrap ---\n";
+    FragTrap copy(ft);
+    FragTrap assigned;
+    assigned = ft;
 
     return 0;
 }
