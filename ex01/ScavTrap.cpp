@@ -1,15 +1,24 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap(), _hitPoints(100), _energyPoints(50), _attackDamage(20) {
+ScavTrap::ScavTrap() : ClapTrap() {
     std::cout << "ScavTrap(" << _name << ") has been created" << std::endl;
+    _hitPoints = 100;
+    _energyPoints = 50;
+    _attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name), _hitPoints(100), _energyPoints(50), _attackDamage(20) {
+ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
     std::cout << "ScavTrap(" << _name << ") has been created" << std::endl;
+    _hitPoints = 100;
+    _energyPoints = 50;
+    _attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other), _hitPoints(other._hitPoints), _energyPoints(other._energyPoints), _attackDamage(other._attackDamage) {
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) {
     std::cout << "ScavTrap(" << _name << ") has been created by copy" << std::endl;
+    _hitPoints = other._hitPoints;
+    _energyPoints = other._energyPoints;
+    _attackDamage = other._attackDamage;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
