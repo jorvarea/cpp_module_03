@@ -21,6 +21,13 @@ ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) {
     _attackDamage = 20;
 }
 
+ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
+    if (this != &other) {
+        ClapTrap::operator=(other);
+    }
+    return *this;
+}
+
 ScavTrap::~ScavTrap() {
     std::cout << "ScavTrap(" << _name << ") has been destroyed" << std::endl;
 }
