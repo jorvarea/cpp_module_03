@@ -11,7 +11,7 @@ RM = rm -rf
 ##                              SOURCES AND OBJECTS                           ##
 ################################################################################
 
-SRC = main.cpp Fixed.cpp Point.cpp bsp.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 OBJECTS = $(SRC:.cpp=.o)
 
