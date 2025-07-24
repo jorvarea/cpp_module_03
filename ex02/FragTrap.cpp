@@ -1,15 +1,24 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap(), _hitPoints(100), _energyPoints(100), _attackDamage(30) {
+FragTrap::FragTrap() : ClapTrap() {
     std::cout << "FragTrap(" << _name << ") has been created" << std::endl;
+    _hitPoints = 100;
+    _energyPoints = 100;
+    _attackDamage = 30;
 }
 
-FragTrap::FragTrap(const std::string& name) : ClapTrap(name), _hitPoints(100), _energyPoints(100), _attackDamage(30) {
+FragTrap::FragTrap(const std::string& name) : ClapTrap(name) {
     std::cout << "FragTrap(" << _name << ") has been created" << std::endl;
+    _hitPoints = 100;
+    _energyPoints = 100;
+    _attackDamage = 30;
 }
 
-FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other), _hitPoints(other._hitPoints), _energyPoints(other._energyPoints), _attackDamage(other._attackDamage) {
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other) {
     std::cout << "FragTrap(" << _name << ") has been created by copy" << std::endl;
+    _hitPoints = other._hitPoints;
+    _energyPoints = other._energyPoints;
+    _attackDamage = other._attackDamage;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& other) {
