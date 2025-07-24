@@ -1,52 +1,23 @@
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main() {
-    ClapTrap bob("Bob");
-    ClapTrap alice("Alice");
+    std::cout << "--- ClapTrap test ---" << std::endl;
+    ClapTrap ct("CL4P-TP");
+    ct.attack("trash can");
+    ct.takeDamage(5);
+    ct.beRepaired(3);
 
-    std::cout << std::endl;
+    std::cout << "\n--- ScavTrap test ---" << std::endl;
+    ScavTrap st("SC4V-TP");
+    st.attack("intruder");
+    st.takeDamage(20);
+    st.beRepaired(10);
+    st.guardGate();
 
-    bob.attack("Alice");
-    alice.takeDamage(0);
-
-    std::cout << std::endl;
-
-    alice.attack("Bob");
-    bob.takeDamage(0);
-
-    std::cout << std::endl;
-
-    bob.beRepaired(5);
-    alice.beRepaired(3);
-
-    std::cout << std::endl;
-
-    for (int i = 0; i < 12; ++i) {
-        bob.attack("Alice");
-    }
-
-    std::cout << std::endl;
-
-    bob.beRepaired(10);
-
-    std::cout << std::endl;
-
-    for (int i = 0; i < 10; ++i) {
-        bob.takeDamage(1);
-    }
-
-    std::cout << std::endl;
-
-    bob.attack("Alice");
-    bob.beRepaired(2);
-
-    std::cout << std::endl;
-
-    for (int i = 0; i < 5; ++i) {
-        bob.takeDamage(3);
-    }
-
-    std::cout << std::endl;
+    std::cout << "\n--- Copy/assign test ---" << std::endl;
+    ScavTrap copy(st);
+    ScavTrap assigned;
+    assigned = st;
 
     return 0;
 }
