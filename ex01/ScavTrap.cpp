@@ -40,7 +40,7 @@ void ScavTrap::attack(const std::string& target) {
     } 
     if (_energyPoints <= 0)
     {
-        std::cout << "ScavTrap(" << this->_name << ") is too exhausted to attack." << std::endl;
+        std::cout << "ScavTrap(" << _name << ") is too exhausted to attack." << std::endl;
         return;
     }
     std::cout << "ScavTrap(" << _name << ") attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
@@ -51,8 +51,8 @@ void ScavTrap::guardGate()
 {
     if (_hitPoints <= 0)
     {
-        std::cout << "ScavTrap(" << this->_name << ") cannot enter Gate keeper mode because it's dead." << std::endl;
+        std::cout << "ScavTrap(" << _name << ") cannot enter Gate keeper mode because it's dead." << std::endl;
         return ;
     }
-    std::cout << "ScavTrap(" << this->_name << ") is now in Gate keeper mode." << std::endl;
+    std::cout << "ScavTrap(" << _name << ") is now in Gate keeper mode." << std::endl;
 }
