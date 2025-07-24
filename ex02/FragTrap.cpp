@@ -12,7 +12,6 @@ FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other), _hitPoints(other._h
     std::cout << "FragTrap(" << _name << ") has been created by copy" << std::endl;
 }
 
-
 FragTrap& FragTrap::operator=(const FragTrap& other) {
     if (this != &other) {
         ClapTrap::operator=(other);
